@@ -1,0 +1,19 @@
+天天天天天天天天天天train_transforms天天天天天天天天天天
+Compose(
+    Resize(size=(256, 256), interpolation=bilinear)
+    RandomOrder(
+    RandomRotation(degrees=[-180.0, 180.0], interpolation=nearest, expand=False, fill=0)
+    RandomHorizontalFlip(p=0.5)
+    RandomVerticalFlip(p=0.5)
+    RandomAutocontrast(p=0.5)
+    ToTensor()
+)
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
+
+天天天天天天天天天天test_transforms天天天天天天天天天天
+Compose(
+    Resize(size=(256, 256), interpolation=bilinear)
+    ToTensor()
+    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+)
